@@ -1,0 +1,42 @@
+{
+  "name": "pondle-components",
+  "version": "1.0.0",
+  "description": "pondle-components",
+  "main": "lib/index.js",
+  "author": {
+    "name": "James Lambert",
+    "url": "https://github.com/jjjjjx"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com//.git"
+  },
+  "bugs": {
+    "url": "https://github.com///issues"
+  },
+  "homepage": "https://github.com//",
+  "dependencies": {},
+  "devDependencies": {
+    "@storybook/react": "^3.2.8",
+    "electrode-archetype-react-component": "^3.0.0",
+    "electrode-archetype-react-component-dev": "^3.0.0",
+    "storybook-addon-jsx": "^4.1.1"
+  },
+  "engines": {
+    "node": ">= 4",
+    "npm": ">= 3"
+  },
+  "scripts": {
+    "prepublish": "clap prepublish",
+    "start": "clap demo",
+    "test": "clap check",
+    "storybook": "start-storybook -p 9001 -c .storybook",
+    "storybook-build": "build-storybook -c .storybook -o .out"
+  },
+  "keywords": [
+    "react",
+    "react-component",
+    "component-library",
+    "react-component-library"
+  ]
+}
