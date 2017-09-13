@@ -1,16 +1,17 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import styles from "./Button.css";
-import classNames from "classnames/bind";
+import cx from "classnames";
+import classNamesBind from "classnames/bind";
 
 const Button = (props) => {
-  const { children, href, type, onClick, disabled, large, full, outlineOnDark, outlineOnLight, highlight, style } = props;
+  const { children, href, type, onClick, disabled, large, full, outlineOnDark, outlineOnLight, highlight, style, className, ...otherProps } = props;
   const Element = href ? "a" : "button";
   const role = href ? "button" : null;
 
-  let cx = classNames.bind(styles);
+  let moduleClassNames = classNamesBind.bind(styles);
 
-  const className = cx({
+  const classes = moduleClassNames({
     button: true,
     disabled: disabled,
     large: large,
@@ -22,13 +23,14 @@ const Button = (props) => {
 
   return (
     <Element
-      className={className}
+      className={cx(classes, className)}
       style={style}
       href={href}
       type={type || "button"}
       onClick={onClick}
       role={role}
-      disabled={disabled} >
+      disabled={disabled}
+      {...otherProps} >
       {children}
     </Element>
   );

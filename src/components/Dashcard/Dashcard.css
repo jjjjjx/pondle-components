@@ -1,0 +1,56 @@
+.wrapper {
+  position: relative;
+  padding: 20px;
+  overflow: hidden;
+  color: #004258;
+  border: 1px solid;
+}
+
+.inner {
+  position: relative;
+}
+
+.dark {
+  background-color: #004258;
+  border: 0;
+  color: white;
+}
+
+.empty {
+  border: 0;
+  background-color: rgb(233, 233, 233);
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg id='Layer_1' xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath class='st0' d='M0 30h30V0z' fill='%23E1E1E1'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: auto 100%;
+}
+
+.utils {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.inner h1, .inner h2, .inner h3, .inner h4, .inner h5, .inner h6 {
+  margin: 0 0 15px;
+  color: inherit;
+  font-weight: normal;
+  line-height: 1;
+}
+
+.inner h1 {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.inner h2 {
+  font-size: 1.2rem;
+}
+
+.inner h3 {
+  font-size: 1rem;
+}
+
+.inner h4, .inner h5, .inner h6 {
+  font-size: 0.8rem;
+}

@@ -15,7 +15,11 @@
     "url": "https://github.com///issues"
   },
   "homepage": "https://github.com//",
-  "dependencies": {},
+  "dependencies": {
+    "@blueprintjs/core": "^1.27.0",
+    "classnames": "^2.2.5",
+    "react-addons-css-transition-group": "^15.6.0"
+  },
   "devDependencies": {
     "@storybook/react": "^3.2.8",
     "electrode-archetype-react-component": "^3.0.0",
