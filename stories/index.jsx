@@ -18,6 +18,7 @@ import IconProfile from "../src/components/Icons/IconProfile";
 import IconProjects from "../src/components/Icons/IconProjects";
 import IconReports from "../src/components/Icons/IconReports";
 import IconSettings from "../src/components/Icons/IconSettings";
+import Topbar from "../src/components/Topbar";
 
 // Stories
 storiesOf("Button", module)
@@ -51,6 +52,8 @@ storiesOf("Button", module)
     <Button full>Hello Button</Button>
   ))
 
+
+
 const Utils = () => (
   <div style={{padding: 30}}>Put utilities or other content here</div>
 );
@@ -80,6 +83,8 @@ storiesOf("Dashcard", module)
       <p>Click the icon in the upper right corner</p>
     </Dashcard>
   ))
+
+
 
 storiesOf("Icons", module)
   .addWithJSX("IconArrowLeft", () => (
@@ -186,3 +191,15 @@ storiesOf("Icons", module)
       <IconSettings size={3} />
     </div>
   ), { skip: 1 })
+
+
+
+  storiesOf("Topbar", module)
+    .addWithJSX("default Topbar", () => (
+      <Topbar>
+        <div>Hello Topbar</div>
+        <div>
+          <Button highlight>Hello Button</Button> <IconMessages size={2} /> <IconSettings size={2} />
+        </div>
+      </Topbar>
+    ))
