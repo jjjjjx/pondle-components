@@ -13,4 +13,5 @@ export { default as IconArrowLeft } from "./components/Icons/IconArrowLeft";
 export { default as IconLogout } from "./components/Icons/IconLogout";
 export { default as IconMore } from "./components/Icons/IconMore";
 export { default as IconMoreVertical } from "./components/Icons/IconMoreVertical";
+export { default as Logo } from "./components/Logo";
 export { default as Topbar } from "./components/Topbar";

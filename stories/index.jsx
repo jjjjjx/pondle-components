@@ -18,6 +18,7 @@ import IconProfile from "../src/components/Icons/IconProfile";
 import IconProjects from "../src/components/Icons/IconProjects";
 import IconReports from "../src/components/Icons/IconReports";
 import IconSettings from "../src/components/Icons/IconSettings";
+import Logo from "../src/components/Logo";
 import Topbar from "../src/components/Topbar";
 
 // Stories
@@ -194,12 +195,36 @@ storiesOf("Icons", module)
 
 
 
-  storiesOf("Topbar", module)
-    .addWithJSX("default Topbar", () => (
-      <Topbar>
-        <div>Hello Topbar</div>
-        <div>
-          <Button highlight>Hello Button</Button> <IconMessages size={2} /> <IconSettings size={2} />
-        </div>
-      </Topbar>
-    ))
+storiesOf("Logo", module)
+  .addWithJSX("Pondle logo", () => (
+    <div style={{width: 120, height: 120}}>
+      <Logo />
+    </div>
+  ), { skip: 1 })
+  .addWithJSX("Pondle Flock logo", () => (
+    <div style={{width: 120, height: 120}}>
+      <Logo flock />
+    </div>
+  ), { skip: 1 })
+  .addWithJSX("graphic only logo", () => (
+    <div style={{width: 80, height: 80}}>
+      <Logo hideText />
+    </div>
+  ), { skip: 1 })
+  .addWithJSX("change logo color", () => (
+    <div style={{width: 120, height: 120}}>
+      <Logo color="#fd7400" />
+    </div>
+  ), { skip: 1 })
+
+
+
+storiesOf("Topbar", module)
+  .addWithJSX("default Topbar", () => (
+    <Topbar>
+      <div>Hello Topbar</div>
+      <div>
+        <Button highlight>Hello Button</Button> <IconMessages size={2} /> <IconSettings size={2} />
+      </div>
+    </Topbar>
+  ))
