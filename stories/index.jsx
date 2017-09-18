@@ -18,7 +18,10 @@ import IconProfile from "../src/components/Icons/IconProfile";
 import IconProjects from "../src/components/Icons/IconProjects";
 import IconReports from "../src/components/Icons/IconReports";
 import IconSettings from "../src/components/Icons/IconSettings";
+import Input from "../src/components/form/Input";
 import Logo from "../src/components/Logo";
+import Select from "../src/components/form/Select";
+import Textarea from "../src/components/form/Textarea";
 import Topbar from "../src/components/Topbar";
 
 // Stories
@@ -83,6 +86,22 @@ storiesOf("Dashcard", module)
       <h3>Dashcard with utilities</h3>
       <p>Click the icon in the upper right corner</p>
     </Dashcard>
+  ))
+
+
+
+storiesOf("Form", module)
+  .addWithJSX("Input", () => (
+    <Input label="First name" type="text" input={{}} meta={{error: null, touched: null}} />
+  ))
+  .addWithJSX("Textarea", () => (
+    <Textarea label="Message" placeholder="Type your message" input={{}} meta={{error: null, touched: null}} />
+  ))
+  .addWithJSX("Select", () => (
+    <Select input={{}} meta={{error: null, touched: null}} label="Select an option">
+      <option>Option 1</option>
+      <option>Option 2</option>
+    </Select>
   ))
 
 

@@ -1,0 +1,25 @@
+.textarea {
+  padding: 6px 10px;
+  color: #004258;
+  background-color: #fff;
+  border: 1px solid #D1D1D1;
+  border-radius: 0;
+  box-shadow: none;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 65px;
+
+  /* Removes awkward default styles on some inputs for iOS */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.textarea:focus {
+  border: 1px solid #1f8a70;
+  outline: 0;
+}
+
+.textarea:disabled {
+  cursor: not-allowed;
+}
