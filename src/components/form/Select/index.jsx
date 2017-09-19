@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import Label from "../Label";
+import FieldError from "../FieldError";
 import styles from "./Select.css";
 
 const Select = (props) => {
-  const { input, label, subLabel, disabled, meta, children, ...otherProps } = props;
+  const { input, label, subLabel, disabled, children, meta: { touched, error }, ...otherProps } = props;
 
   return (
     <div {...otherProps}>
@@ -14,6 +15,7 @@ const Select = (props) => {
           {children}
         </select>
       </div>
+      { touched && error && <FieldError text={error} /> }
     </div>
   );
 };
