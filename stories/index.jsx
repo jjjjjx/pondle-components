@@ -92,13 +92,13 @@ storiesOf("Dashcard", module)
 
 storiesOf("Form", module)
   .addWithJSX("Input", () => (
-    <Input label="First name" type="text" input={{}} meta={{error: null, touched: null}} />
+    <Input label="First name" subLabel="This is a sub label." type="text" input={{}} meta={{error: null, touched: null}} />
   ))
   .addWithJSX("Textarea", () => (
-    <Textarea label="Message" placeholder="Type your message" input={{}} meta={{error: null, touched: null}} />
+    <Textarea label="Message" subLabel="This is a sub label." placeholder="Type your message" input={{}} meta={{error: null, touched: null}} />
   ))
   .addWithJSX("Select", () => (
-    <Select input={{}} meta={{error: null, touched: null}} label="Select an option">
+    <Select input={{}} meta={{error: null, touched: null}} label="Select an option" subLabel="This is a sub label.">
       <option>Option 1</option>
       <option>Option 2</option>
     </Select>

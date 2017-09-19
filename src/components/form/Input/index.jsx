@@ -5,11 +5,11 @@ import FieldError from "../FieldError";
 import styles from "./Input.css";
 
 const Input = (props) => {
-  const { input, label, placeholder, type, disabled, meta: { touched, error }, ...otherProps } = props;
+  const { input, label, subLabel, placeholder, type, disabled, meta: { touched, error }, ...otherProps } = props;
 
   return (
     <div {...otherProps}>
-      { label && <Label text={label} /> }
+      { label && <Label text={label} subText={subLabel} /> }
       <input {...input} className={styles.input} placeholder={placeholder} type={type || "text"} disabled={disabled} />
       { touched && error && <FieldError text={error} /> }
     </div>
@@ -22,6 +22,7 @@ Input.propTypes = {
   input: PropTypes.object, // The input props provided by redux-form's Form component
   meta: PropTypes.object, // The meta props provided by redux-form's Form component
   label: PropTypes.string, // The label for this field
+  subLabel: PropTypes.string, // The label sub text, e.g. field instructions
   placeholder: PropTypes.string, // The placeholder text for this field
   type: PropTypes.string, // The type of input. Default is "text"
   disabled: PropTypes.bool, // A flag to disable this field
