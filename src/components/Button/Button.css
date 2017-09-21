@@ -1,40 +1,43 @@
-.button {
+.button, .button:hover {
   border: 0;
   color: white;
   background: #1f8a70;
   padding: 10px 15px;
   cursor: pointer;
   display: inline-block;
+  line-height: normal;
   font-size: 0.9rem;
+  text-align: center;
+  text-decoration: none;
 }
 
-.disabled {
+.disabled, .disabled:hover {
   cursor: not-allowed;
   opacity: 0.5;
 }
 
-.large {
+.large, .large:hover {
   padding: 15px 30px;
   font-size: larger;
 }
 
-.full {
+.full, .full:hover {
   display: block;
   width: 100%;
 }
 
-.outlineOnDark {
+.outlineOnDark, .outlineOnDark:hover {
   background: transparent;
   border: 1px solid;
 }
 
-.outlineOnLight {
+.outlineOnLight, .outlineOnLight:hover {
   background: transparent;
   color: #1f8a70;
   border: 1px solid;
 }
 
-.highlight {
+.highlight, .highlight:hover {
   background: #fd7400;
 }
 

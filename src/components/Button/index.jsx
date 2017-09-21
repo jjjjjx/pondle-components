@@ -5,9 +5,9 @@ import cx from "classnames";
 import classNamesBind from "classnames/bind";
 
 const Button = (props) => {
-  const { children, href, type, onClick, disabled, large, full, outlineOnDark, outlineOnLight, highlight, style, className, ...otherProps } = props;
-  const Element = href ? "a" : "button";
-  const role = href ? "button" : null;
+  const { children, href, type, component, onClick, disabled, large, full, outlineOnDark, outlineOnLight, highlight, style, className, ...otherProps } = props;
+  let Element = href ? "a" : "button";
+  Element = component ? component : Element;
 
   let moduleClassNames = classNamesBind.bind(styles);
 
@@ -26,9 +26,8 @@ const Button = (props) => {
       className={cx(classes, className)}
       style={style}
       href={href}
-      type={type || "button"}
+      type={type}
       onClick={onClick}
-      role={role}
       disabled={disabled}
       {...otherProps} >
       {children}
@@ -38,7 +37,8 @@ const Button = (props) => {
 
 Button.propTypes = {
   href: PropTypes.string, // Optional link address
-  type: PropTypes.string, // The button type, e.g. "submit". Defaults to "button".
+  type: PropTypes.string, // The button type, e.g. "submit"
+  componet: PropTypes.element, // Use a component as the button element, e.g. a Link for react-router
   onClick: PropTypes.func, // Click event handler function
   disabled: PropTypes.bool, // Disable this button
   large: PropTypes.bool, // Larger button size
