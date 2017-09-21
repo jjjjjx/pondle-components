@@ -10,7 +10,7 @@ const Textarea = (props) => {
   return (
     <div {...otherProps}>
       { label && <Label text={label} subText={subLabel} /> }
-      <textarea {...input} className={styles.textarea} placeholder={placeholder} rows={rows} disabled={disabled} />
+      <textarea {...input} className={styles.textarea} style={touched && error && {borderColor: "red"}} placeholder={placeholder} rows={rows} disabled={disabled} />
       { touched && error && <FieldError text={error} /> }
     </div>
   );

@@ -10,7 +10,7 @@ const Input = (props) => {
   return (
     <div {...otherProps}>
       { label && <Label text={label} subText={subLabel} /> }
-      <input {...input} className={styles.input} placeholder={placeholder} type={type || "text"} disabled={disabled} />
+      <input {...input} className={styles.input} style={touched && error && {borderColor: "red"}} placeholder={placeholder} type={type || "text"} disabled={disabled} />
       { touched && error && <FieldError text={error} /> }
     </div>
   );

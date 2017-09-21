@@ -11,7 +11,7 @@ const Select = (props) => {
     <div {...otherProps}>
       { label && <Label text={label} subText={subLabel} /> }
       <div className={styles.select}>
-        <select {...input} disabled={disabled}>
+        <select {...input} style={touched && error && {borderColor: "red"}} disabled={disabled}>
           {children}
         </select>
       </div>
