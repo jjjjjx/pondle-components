@@ -46,5 +46,5 @@ export default Dashcard;
 Dashcard.propTypes = {
   cardStyle: PropTypes.oneOf(["dark", "empty"]), // Optional card types
   style: PropTypes.object, // Custom styles object
-  utils: PropTypes.object, // Content to place inside the utilities popover. Use a react functional component.
+  utils: PropTypes.element, // Content to place inside the utilities popover. Use a react component.
 };
