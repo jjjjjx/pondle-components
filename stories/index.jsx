@@ -5,6 +5,7 @@ import blueprint from "../src/styles/blueprint.css";
 // Components
 import Button from "../src/components/Button";
 import Dashcard from "../src/components/Dashcard";
+import FieldError from "../src/components/form/FieldError";
 import IconArrowLeft from "../src/components/Icons/IconArrowLeft";
 import IconArrowRight from "../src/components/Icons/IconArrowRight";
 import IconCaretDown from "../src/components/Icons/IconCaretDown";
@@ -19,6 +20,7 @@ import IconProjects from "../src/components/Icons/IconProjects";
 import IconReports from "../src/components/Icons/IconReports";
 import IconSettings from "../src/components/Icons/IconSettings";
 import Input from "../src/components/form/Input";
+import Label from "../src/components/form/Label";
 import Logo from "../src/components/Logo";
 import Select from "../src/components/form/Select";
 import Textarea from "../src/components/form/Textarea";
@@ -102,6 +104,12 @@ storiesOf("Form", module)
       <option>Option 1</option>
       <option>Option 2</option>
     </Select>
+  ))
+  .addWithJSX("Label", () => (
+    <Label text="Label" subText="This is a sub label." />
+  ))
+  .addWithJSX("FieldError", () => (
+    <FieldError text="This field is required" />
   ))
 
 
