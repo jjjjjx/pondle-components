@@ -9,12 +9,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com//.git"
+    "url": "https://github.com/pondle-org/pondle-components"
   },
   "bugs": {
-    "url": "https://github.com///issues"
+    "url": "https://github.com/pondle-org/pondle-components/issues"
   },
-  "homepage": "https://github.com//",
+  "homepage": "https://github.com/pondle-org/pondle-components",
   "dependencies": {
     "@blueprintjs/core": "^1.27.0",
     "classnames": "^2.2.5",
@@ -22,6 +22,7 @@
   },
   "devDependencies": {
     "@storybook/react": "^3.2.8",
+    "@storybook/storybook-deployer": "^2.0.0",
     "electrode-archetype-react-component": "^3.0.0",
     "electrode-archetype-react-component-dev": "^3.0.0",
     "storybook-addon-jsx": "^4.1.1"
@@ -35,7 +36,8 @@
     "start": "clap demo",
     "test": "clap check",
     "storybook": "start-storybook -p 9001 -c .storybook",
-    "storybook-build": "build-storybook -c .storybook -o .out"
+    "build-storybook": "build-storybook",
+    "deploy-storybook": "storybook-to-ghpages"
   },
   "keywords": [
     "react",
