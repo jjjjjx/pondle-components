@@ -4,6 +4,14 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.js$/,
+        include: [
+          path.resolve('node_modules', 'stringify-object'),
+          path.resolve('node_modules', 'get-own-enumerable-property-symbols')
+        ],
+        loader: 'babel-loader',
+      },
+      {
         test: /\.css$/,
         use: [
           {
