@@ -16,5 +16,6 @@ export { default as IconMoreVertical } from "./components/Icons/IconMoreVertical
 export { default as Input } from "./components/form/Input";
 export { default as Logo } from "./components/Logo";
 export { default as Select } from "./components/form/Select";
+export { default as Spinner } from "./components/Spinner";
 export { default as Textarea } from "./components/form/Textarea";
 export { default as Topbar } from "./components/Topbar";

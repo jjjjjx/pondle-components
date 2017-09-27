@@ -23,6 +23,7 @@ import Input from "../src/components/form/Input";
 import Label from "../src/components/form/Label";
 import Logo from "../src/components/Logo";
 import Select from "../src/components/form/Select";
+import Spinner from "../src/components/Spinner";
 import Textarea from "../src/components/form/Textarea";
 import Topbar from "../src/components/Topbar";
 
@@ -243,6 +244,13 @@ storiesOf("Logo", module)
       <Logo color="#fd7400" />
     </div>
   ), { skip: 1 })
+
+
+
+storiesOf("Spinner", module)
+  .addWithJSX("Spinner", () => (
+    <Spinner color="#1f8a70" />
+  ))
 
 
 
