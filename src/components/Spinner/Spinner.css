@@ -1,12 +1,12 @@
 .path {
-  stroke-dasharray: 530;
-  stroke-dashoffset: 530;
+  stroke-dasharray: 518;
+  stroke-dashoffset: 518;
   animation: dash 1.2s cubic-bezier(0.4, 0, 0.2, 1) alternate infinite;
 }
 
 @keyframes dash {
   from {
-    stroke-dashoffset: 530;
+    stroke-dashoffset: 518;
   }
   to {
     stroke-dashoffset: 0;
