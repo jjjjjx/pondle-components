@@ -3,15 +3,23 @@ import PropTypes from "prop-types";
 import Label from "../Label";
 import FieldError from "../FieldError";
 import styles from "./Select.css";
+import classNames from "classnames/bind";
+
+let cx = classNames.bind(styles);
 
 const Select = (props) => {
   const { input, label, subLabel, disabled, children, meta: { touched, error }, ...otherProps } = props;
 
+  const className = cx({
+    select: true,
+    hasError: touched && error,
+  });
+
   return (
     <div {...otherProps}>
       { label && <Label text={label} subText={subLabel} /> }
-      <div className={styles.select}>
-        <select {...input} style={touched && error && {borderColor: "red"}} disabled={disabled}>
+      <div className={className}>
+        <select {...input} disabled={disabled}>
           {children}
         </select>
       </div>

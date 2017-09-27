@@ -3,14 +3,22 @@ import PropTypes from "prop-types";
 import Label from "../Label";
 import FieldError from "../FieldError";
 import styles from "./Textarea.css";
+import classNames from "classnames/bind";
+
+let cx = classNames.bind(styles);
 
 const Textarea = (props) => {
   const { input, label, subLabel, placeholder, rows, disabled, meta: { touched, error }, ...otherProps } = props;
 
+  const className = cx({
+    textarea: true,
+    hasError: touched && error,
+  });
+
   return (
     <div {...otherProps}>
       { label && <Label text={label} subText={subLabel} /> }
-      <textarea {...input} className={styles.textarea} style={touched && error && {borderColor: "red"}} placeholder={placeholder} rows={rows} disabled={disabled} />
+      <textarea {...input} className={className} placeholder={placeholder} rows={rows} disabled={disabled} />
       { touched && error && <FieldError text={error} /> }
     </div>
   );
