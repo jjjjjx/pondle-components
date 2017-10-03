@@ -10,6 +10,7 @@ import IconArrowLeft from "../src/components/Icons/IconArrowLeft";
 import IconArrowRight from "../src/components/Icons/IconArrowRight";
 import IconCaretDown from "../src/components/Icons/IconCaretDown";
 import IconDashboard from "../src/components/Icons/IconDashboard";
+import IconGlobe from "../src/components/Icons/IconGlobe";
 import IconLogout from "../src/components/Icons/IconLogout";
 import IconMessages from "../src/components/Icons/IconMessages";
 import IconMore from "../src/components/Icons/IconMore";
@@ -18,7 +19,9 @@ import IconPeople from "../src/components/Icons/IconPeople";
 import IconProfile from "../src/components/Icons/IconProfile";
 import IconProjects from "../src/components/Icons/IconProjects";
 import IconReports from "../src/components/Icons/IconReports";
+import IconResources from "../src/components/Icons/IconResources";
 import IconSettings from "../src/components/Icons/IconSettings";
+import IconSurveys from "../src/components/Icons/IconSurveys";
 import Input from "../src/components/form/Input";
 import Label from "../src/components/form/Label";
 import Logo from "../src/components/Logo";
@@ -148,6 +151,14 @@ storiesOf("Icons", module)
       <IconDashboard size={3} />
     </div>
   ), { skip: 1 })
+  .addWithJSX("IconGlobe", () => (
+    <div>
+      <IconGlobe />
+      <IconGlobe color="#ff0000" />
+      <IconGlobe large />
+      <IconGlobe size={3} />
+    </div>
+  ), { skip: 1 })
   .addWithJSX("IconLogout", () => (
     <div>
       <IconLogout />
@@ -212,12 +223,28 @@ storiesOf("Icons", module)
       <IconReports size={3} />
     </div>
   ), { skip: 1 })
+  .addWithJSX("IconResources", () => (
+    <div>
+      <IconResources />
+      <IconResources color="#ff0000" />
+      <IconResources large />
+      <IconResources size={3} />
+    </div>
+  ), { skip: 1 })
   .addWithJSX("IconSettings", () => (
     <div>
       <IconSettings />
       <IconSettings color="#ff0000" />
       <IconSettings large />
       <IconSettings size={3} />
+    </div>
+  ), { skip: 1 })
+  .addWithJSX("IconSurveys", () => (
+    <div>
+      <IconSurveys />
+      <IconSurveys color="#ff0000" />
+      <IconSurveys large />
+      <IconSurveys size={3} />
     </div>
   ), { skip: 1 })
 
