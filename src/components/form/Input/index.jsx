@@ -8,18 +8,18 @@ import classNames from "classnames/bind";
 let cx = classNames.bind(styles);
 
 const Input = (props) => {
-  const { input, label, subLabel, placeholder, type, disabled, meta: { touched, error }, ...otherProps } = props;
+  const { input, label, subLabel, placeholder, type, disabled, meta: { touched, dirty, error }, ...otherProps } = props;
 
   const inputClassNames = cx({
     input: true,
-    hasError: touched && error,
+    hasError: (touched || dirty) && error,
   });
 
   return (
     <div {...otherProps}>
       { label && <Label text={label} subText={subLabel} /> }
       <input {...input} className={inputClassNames} placeholder={placeholder} type={type || "text"} disabled={disabled} />
-      { touched && error && <FieldError text={error} /> }
+      { (touched || dirty) && error && <FieldError text={error} /> }
     </div>
   );
 };
