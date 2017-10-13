@@ -278,6 +278,9 @@ storiesOf("Spinner", module)
   .addWithJSX("Spinner", () => (
     <Spinner color="#1f8a70" />
   ))
+  .addWithJSX("Spinner without animation", () => (
+    <Spinner color="#1f8a70" animate={false} />
+  ))
 
 
 
