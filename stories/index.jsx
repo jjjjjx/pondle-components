@@ -3,6 +3,7 @@ import { storiesOf } from '@storybook/react';
 import blueprint from "../src/styles/blueprint.css";
 
 // Components
+import Avatar from "../src/components/Avatar";
 import Button from "../src/components/Button";
 import Dashcard from "../src/components/Dashcard";
 import FieldError from "../src/components/form/FieldError";
@@ -31,6 +32,16 @@ import Textarea from "../src/components/form/Textarea";
 import Topbar from "../src/components/Topbar";
 
 // Stories
+storiesOf("Avatar", module)
+  .addWithJSX("default avatar", () => (
+    <Avatar />
+  ))
+  .addWithJSX("avatar with custom src URL", () => (
+    <Avatar src="http://www.cat-lovers-only.com/images/tabby-purrito-400.jpg" alt="Purrito" />
+  ))
+
+
+
 storiesOf("Button", module)
   .addWithJSX("default button", () => (
     <Button>Hello Button</Button>

@@ -1,3 +1,4 @@
+export { default as Avatar } from "./components/Avatar";
 export { default as Button } from "./components/Button";
 export { default as Dashcard } from "./components/Dashcard";
 export { default as IconArrowLeft } from "./components/Icons/IconArrowLeft";
