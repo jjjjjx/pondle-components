@@ -3,20 +3,20 @@ import PropTypes from "prop-types";
 import Label from "../Label";
 import FieldError from "../FieldError";
 import styles from "./Input.css";
-import classNames from "classnames/bind";
-
-let cx = classNames.bind(styles);
+import cx from "classnames";
 
 const Input = (props) => {
   const { input, label, subLabel, placeholder, type, disabled, meta: { touched, dirty, error }, ...otherProps } = props;
 
-  const inputClassNames = cx({
-    input: true,
-    hasError: (touched || dirty) && error,
-  });
+  const inputClassNames = cx(
+    "pndl-input__input",
+    styles.input,
+    { "hasError": (touched || dirty) && error },
+    { [`${styles.hasError}`]: (touched || dirty) && error }
+  );
 
   return (
-    <div {...otherProps}>
+    <div {...otherProps} className={cx("pndl-input", otherProps.className)}>
       { label && <Label text={label} subText={subLabel} /> }
       <input {...input} className={inputClassNames} placeholder={placeholder} type={type || "text"} disabled={disabled} />
       { (touched || dirty) && error && <FieldError text={error} /> }

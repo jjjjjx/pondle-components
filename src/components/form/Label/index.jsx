@@ -1,14 +1,15 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import styles from "./Label.css";
+import cx from "classnames";
 
 const Label = (props) => {
   const { text, subText } = props;
 
   return (
-    <label className={styles.label}>
+    <label className={cx(styles.label, "pndl-form-label")}>
       {text}
-      { subText && <span className={styles.subLabel}>{subText}</span> }
+      { subText && <span className={cx(styles.subLabel, "pndl-form-sublabel")}>{subText}</span> }
     </label>
   );
 };

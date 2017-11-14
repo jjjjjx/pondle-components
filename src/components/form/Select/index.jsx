@@ -3,22 +3,22 @@ import PropTypes from "prop-types";
 import Label from "../Label";
 import FieldError from "../FieldError";
 import styles from "./Select.css";
-import classNames from "classnames/bind";
-
-let cx = classNames.bind(styles);
+import cx from "classnames";
 
 const Select = (props) => {
   const { input, label, subLabel, disabled, children, meta: { touched, error }, ...otherProps } = props;
 
-  const className = cx({
-    select: true,
-    hasError: touched && error,
-  });
+  const classNames = cx(
+    "pndl-select__select",
+    styles.select,
+    { "hasError": touched && error },
+    { [`${styles.hasError}`]: touched && error }
+  );
 
   return (
-    <div {...otherProps}>
+    <div {...otherProps} className={cx("pndl-select", otherProps.className)}>
       { label && <Label text={label} subText={subLabel} /> }
-      <div className={className}>
+      <div className={classNames}>
         <select {...input} disabled={disabled}>
           {children}
         </select>

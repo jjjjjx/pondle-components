@@ -21,9 +21,19 @@ const Button = (props) => {
     highlight: highlight,
   });
 
+  const pndlClassNames = cx(
+    "pndl-button",
+    { "pndl-button--disabled": disabled },
+    { "pndl-button--large": large },
+    { "pndl-button--full": full },
+    { "pndl-button--outlineOnDark": outlineOnDark },
+    { "pndl-button--outlineOnLight": outlineOnLight },
+    { "pndl-button--highlight": highlight }
+  );
+
   return (
     <Element
-      className={cx(classes, className)}
+      className={cx(classes, className, pndlClassNames)}
       style={style}
       href={href}
       type={type}

@@ -3,22 +3,22 @@ import PropTypes from "prop-types";
 import Label from "../Label";
 import FieldError from "../FieldError";
 import styles from "./Textarea.css";
-import classNames from "classnames/bind";
-
-let cx = classNames.bind(styles);
+import cx from "classnames";
 
 const Textarea = (props) => {
   const { input, label, subLabel, placeholder, rows, disabled, meta: { touched, error }, ...otherProps } = props;
 
-  const className = cx({
-    textarea: true,
-    hasError: touched && error,
-  });
+  const classNames = cx(
+    "pndl-textarea",
+    styles.textarea,
+    { "hasError": touched && error },
+    { [`${styles.hasError}`]: touched && error }
+  );
 
   return (
-    <div {...otherProps}>
+    <div {...otherProps} className={cx("pndl-textarea", otherProps.className)}>
       { label && <Label text={label} subText={subLabel} /> }
-      <textarea {...input} className={className} placeholder={placeholder} rows={rows} disabled={disabled} />
+      <textarea {...input} className={classNames} placeholder={placeholder} rows={rows} disabled={disabled} />
       { touched && error && <FieldError text={error} /> }
     </div>
   );

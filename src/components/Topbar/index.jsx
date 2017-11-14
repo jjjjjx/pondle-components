@@ -6,7 +6,7 @@ const Topbar = (props) => {
   const { children, className, ...otherProps } = props;
 
   return (
-    <div className={cx(styles.topbar, className)} {...otherProps}>
+    <div className={cx(styles.topbar, className, "pndl-topbar")} {...otherProps}>
       {children}
     </div>
   );

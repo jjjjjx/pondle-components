@@ -18,6 +18,12 @@ const Dashcard = (props) => {
     empty: cardStyle === "empty",
   });
 
+  const pndlClassNames = cx(
+    "pndl-dashcard",
+    { "pndl-dashcard--dark": cardStyle === "dark" },
+    { "pndl-dashcard--empty": cardStyle === "empty" },
+  );
+
 
   const Utils = () => {
     const buttonStyles = {
@@ -25,16 +31,16 @@ const Dashcard = (props) => {
       color: cardStyle === "dark" ? "white" : "#a9abad",
     };
     return (
-      <Popover content={utils} position={Position.LEFT} className={styles.utils}>
+      <Popover content={utils} position={Position.LEFT} className={cx(styles.utils, "pndl-dashcard__utils")}>
         <Button style={buttonStyles}><IconMoreVertical /></Button>
       </Popover>
     );
   };
 
   return (
-    <div className={cx(classes, className)} style={style} {...otherProps}>
+    <div className={cx(classes, pndlClassNames, className)} style={style} {...otherProps}>
       { utils && <Utils /> }
-      <div className={styles.inner}>
+      <div className={cx(styles.inner, "pndl-dashcard__inner")}>
         {props.children}
       </div>
     </div>
