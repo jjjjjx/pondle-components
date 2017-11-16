@@ -1,6 +1,7 @@
 export { default as Avatar } from "./components/Avatar";
 export { default as Button } from "./components/Button";
 export { default as Dashcard } from "./components/Dashcard";
+export { default as DateSelect } from "./components/form/DateSelect";
 export { default as IconArrowLeft } from "./components/Icons/IconArrowLeft";
 export { default as IconArrowRight } from "./components/Icons/IconArrowRight";
 export { default as IconCaretDown } from "./components/Icons/IconCaretDown";
@@ -19,6 +20,7 @@ export { default as IconSettings } from "./components/Icons/IconSettings";
 export { default as IconSurveys } from "./components/Icons/IconSurveys";
 export { default as Input } from "./components/form/Input";
 export { default as Logo } from "./components/Logo";
+export { default as NativeDateInput } from "./components/form/NativeDateInput";
 export { default as Select } from "./components/form/Select";
 export { default as Spinner } from "./components/Spinner";
 export { default as Textarea } from "./components/form/Textarea";

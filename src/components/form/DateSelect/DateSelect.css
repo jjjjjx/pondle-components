@@ -1,4 +1,11 @@
-.input {
+.fields {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.fields select {
+  flex: 1 1 auto;
   height: 38px;
   padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
   color: #004258;
@@ -7,7 +14,6 @@
   border-radius: 0;
   box-shadow: none;
   box-sizing: border-box;
-  width: 100%;
 
   /* Removes awkward default styles on some inputs for iOS */
   -webkit-appearance: none;
@@ -15,12 +21,16 @@
   appearance: none;
 }
 
-.input:focus {
+.fields select:nth-child(2) {
+  margin: 0 10px;
+}
+
+.fields select:focus {
   border: 1px solid #1f8a70;
   outline: 0;
 }
 
-.input:disabled {
+.fields select:disabled {
   cursor: not-allowed;
   color: #D1D1D1;
 }

@@ -1,5 +1,5 @@
 .select {
-  background: #fff url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewbox='0 0 15 10' width='15' height='10'%3e%3cpolygon points='0,0 7.5,10 15,0 ' fill='%231F8A70'/%3e%3c/svg%3e") right 10px center no-repeat
+  background: #fff url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewbox='0 0 15 10' width='15' height='10'%3e%3cpolygon points='0,0 7.5,10 15,0 ' fill='%231F8A70'/%3e%3c/svg%3e") right 10px center no-repeat;
 }
 
 .select > select {
@@ -21,8 +21,8 @@
 }
 
 .select > select:disabled {
-  color: #ccc;
   cursor: not-allowed;
+  color: #D1D1D1;
 }
 
 .hasError > select {

@@ -8,6 +8,7 @@
   box-sizing: border-box;
   width: 100%;
   min-height: 65px;
+  font-family: inherit;
 
   /* Removes awkward default styles on some inputs for iOS */
   -webkit-appearance: none;
@@ -22,6 +23,7 @@
 
 .textarea:disabled {
   cursor: not-allowed;
+  color: #D1D1D1;
 }
 
 .hasError {

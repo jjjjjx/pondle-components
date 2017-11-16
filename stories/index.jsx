@@ -5,6 +5,7 @@ import blueprint from "../src/styles/blueprint.css";
 // Components
 import Avatar from "../src/components/Avatar";
 import Button from "../src/components/Button";
+import DateSelect from "../src/components/form/DateSelect";
 import Dashcard from "../src/components/Dashcard";
 import FieldError from "../src/components/form/FieldError";
 import IconArrowLeft from "../src/components/Icons/IconArrowLeft";
@@ -119,6 +120,9 @@ storiesOf("Form", module)
       <option>Option 1</option>
       <option>Option 2</option>
     </Select>
+  ))
+  .addWithJSX("DateSelect", () => (
+    <DateSelect label="Date of birth" input={{onChange: (e) => console.log(e)}} meta={{error: null, touched: false, dirty: false}} />
   ))
   .addWithJSX("Label", () => (
     <Label text="Label" subText="This is a sub label." />
