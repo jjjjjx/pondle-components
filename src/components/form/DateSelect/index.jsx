@@ -4,13 +4,18 @@ import NativeDateInput from "../NativeDateInput";
 import DateSelectComponent from "./DateSelect";
 
 const isTouchDevice = () => {
-  return 'ontouchstart' in document.documentElement;
+  const document = typeof document === 'undefined' ? '' : document;
+  return document && 'ontouchstart' in document.documentElement;
 }
 
 const dateInputSupported = () => {
-  let testInput = document.createElement("input");
-  testInput.type = "date";
-  return testInput.type !== "text";
+  try {
+    let testInput = document.createElement("input");
+    testInput.type = "date";
+    return testInput.type !== "text";
+  } catch(err) {
+    return false;
+  }
 }
 
 const DateSelect = (props) => {
