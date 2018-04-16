@@ -46,3 +46,14 @@
   border-color: #fd7400;
   color: #fd7400;
 }
+
+.minimal {
+  color: inherit;
+  background-color: transparent;
+  border: 0;
+}
+
+.minimal:hover {
+  color: inherit;
+  background-color: #e1e1e1;
+}

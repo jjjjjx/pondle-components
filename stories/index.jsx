@@ -53,6 +53,9 @@ storiesOf("Button", module)
   .addWithJSX("highlight button", () => (
     <Button highlight>Hello Button</Button>
   ))
+  .addWithJSX("minimal button", () => (
+    <Button minimal>Hello Button</Button>
+  ))
   .addWithJSX("outline button", () => (
     <Button outlineOnLight>Hello Button</Button>
   ))

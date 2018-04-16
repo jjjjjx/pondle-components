@@ -5,7 +5,7 @@ import cx from "classnames";
 import classNamesBind from "classnames/bind";
 
 const Button = (props) => {
-  const { children, href, type, component, onClick, disabled, large, full, outlineOnDark, outlineOnLight, highlight, style, className, ...otherProps } = props;
+  const { children, href, type, component, onClick, disabled, large, full, outlineOnDark, outlineOnLight, highlight, minimal, style, className, ...otherProps } = props;
   let Element = href ? "a" : "button";
   Element = component ? component : Element;
 
@@ -19,6 +19,7 @@ const Button = (props) => {
     outlineOnDark: outlineOnDark,
     outlineOnLight: outlineOnLight,
     highlight: highlight,
+    minimal: minimal
   });
 
   const pndlClassNames = cx(
@@ -28,7 +29,8 @@ const Button = (props) => {
     { "pndl-button--full": full },
     { "pndl-button--outlineOnDark": outlineOnDark },
     { "pndl-button--outlineOnLight": outlineOnLight },
-    { "pndl-button--highlight": highlight }
+    { "pndl-button--highlight": highlight },
+    { "pndl-button--minimal": minimal }
   );
 
   return (
@@ -56,6 +58,7 @@ Button.propTypes = {
   outlineOnDark: PropTypes.bool, // Outline style for use on dark backgrounds
   outlineOnLight: PropTypes.bool, // Outline style for use on light backgrounds
   highlight: PropTypes.bool, // Highlight button style
+  minimal: PropTypes.bool, // Minimal button style
   style: PropTypes.object, // Custom styles object
 };
 
