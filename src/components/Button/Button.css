@@ -11,6 +11,10 @@
   text-decoration: none;
 }
 
+.button * {
+  vertical-align: middle;
+}
+
 .disabled, .disabled:hover {
   cursor: not-allowed;
   opacity: 0.5;
