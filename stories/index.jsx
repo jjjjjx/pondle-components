@@ -4,6 +4,7 @@ import blueprint from "../src/styles/blueprint.css";
 
 // Components
 import Avatar from "../src/components/Avatar";
+import Badge from "../src/components/Badge";
 import Button from "../src/components/Button";
 import DateSelect from "../src/components/form/DateSelect";
 import Dashcard from "../src/components/Dashcard";
@@ -40,6 +41,16 @@ storiesOf("Avatar", module)
   .addWithJSX("avatar with custom src URL", () => (
     <Avatar src="http://www.cat-lovers-only.com/images/tabby-purrito-400.jpg" alt="Purrito" />
   ))
+
+
+
+  storiesOf("Badge", module)
+    .addWithJSX("default badge", () => (
+      <Badge>10</Badge>
+    ))
+    .addWithJSX("round badge", () => (
+      <Badge round>10</Badge>
+    ))
 
 
 
