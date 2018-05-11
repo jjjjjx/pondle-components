@@ -3,6 +3,7 @@ export { default as Badge } from "./components/Badge";
 export { default as Button } from "./components/Button";
 export { default as Dashcard } from "./components/Dashcard";
 export { default as DateSelect } from "./components/form/DateSelect";
+export { default as ErrorBoundary } from "./components/ErrorBoundary";
 export { default as IconArrowLeft } from "./components/Icons/IconArrowLeft";
 export { default as IconArrowRight } from "./components/Icons/IconArrowRight";
 export { default as IconCaretDown } from "./components/Icons/IconCaretDown";
