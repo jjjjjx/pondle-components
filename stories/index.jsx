@@ -30,6 +30,11 @@ import Label from "../src/components/form/Label";
 import Logo from "../src/components/Logo";
 import Select from "../src/components/form/Select";
 import Spinner from "../src/components/Spinner";
+import Table from "../src/components/table/Table";
+import TableBody from "../src/components/table/TableBody";
+import TableCell from "../src/components/table/TableCell";
+import TableHead from "../src/components/table/TableHead";
+import TableRow from "../src/components/table/TableRow";
 import Textarea from "../src/components/form/Textarea";
 import Topbar from "../src/components/Topbar";
 
@@ -309,6 +314,66 @@ storiesOf("Spinner", module)
   ))
   .addWithJSX("Spinner without animation", () => (
     <Spinner color="#1f8a70" animate={false} />
+  ))
+
+
+
+storiesOf("Table", module)
+  .addWithJSX("Default table", () => (
+    <Table>
+      <TableHead>
+        <TableRow>
+          <TableCell>Heading1</TableCell>
+          <TableCell>Heading2</TableCell>
+          <TableCell>Heading3</TableCell>
+        </TableRow>
+      </TableHead>
+      <TableBody>
+        <TableRow>
+          <TableCell>Row1Col1</TableCell>
+          <TableCell>Row1Col2</TableCell>
+          <TableCell>Row1Col3</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>Row2Col1</TableCell>
+          <TableCell>Row2Col2</TableCell>
+          <TableCell>Row2Col3</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>Row3Col1</TableCell>
+          <TableCell>Row3Col2</TableCell>
+          <TableCell>Row3Col3</TableCell>
+        </TableRow>
+      </TableBody>
+    </Table>
+  ))
+  .addWithJSX("Striped table", () => (
+    <Table striped>
+      <TableHead>
+        <TableRow>
+          <TableCell>Heading1</TableCell>
+          <TableCell>Heading2</TableCell>
+          <TableCell>Heading3</TableCell>
+        </TableRow>
+      </TableHead>
+      <TableBody>
+        <TableRow>
+          <TableCell>Row1Col1</TableCell>
+          <TableCell>Row1Col2</TableCell>
+          <TableCell>Row1Col3</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>Row2Col1</TableCell>
+          <TableCell>Row2Col2</TableCell>
+          <TableCell>Row2Col3</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>Row3Col1</TableCell>
+          <TableCell>Row3Col2</TableCell>
+          <TableCell>Row3Col3</TableCell>
+        </TableRow>
+      </TableBody>
+    </Table>
   ))
 
 
