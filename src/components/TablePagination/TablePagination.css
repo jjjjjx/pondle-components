@@ -1,0 +1,29 @@
+.pagination {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.caption {
+  font-style: italic;
+  flex: 0 0 auto;
+}
+
+.controls {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  flex: 0 0 auto;
+}
+
+.control, .control:hover {
+  text-decoration: underline;
+}
+
+.pageNumbers {
+  display: flex;
+  flex-wrap: nowrap;
+}

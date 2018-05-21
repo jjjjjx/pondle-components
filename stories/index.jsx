@@ -34,6 +34,7 @@ import Table from "../src/components/table/Table";
 import TableBody from "../src/components/table/TableBody";
 import TableCell from "../src/components/table/TableCell";
 import TableHead from "../src/components/table/TableHead";
+import TablePagination from "../src/components/TablePagination";
 import TableRow from "../src/components/table/TableRow";
 import Textarea from "../src/components/form/Textarea";
 import Topbar from "../src/components/Topbar";
@@ -374,6 +375,13 @@ storiesOf("Table", module)
         </TableRow>
       </TableBody>
     </Table>
+  ))
+
+
+
+storiesOf("TablePagination", module)
+  .addWithJSX("default table pagination", () => (
+    <TablePagination count={52} page={3} rowsPerPage={10} onChangePage={newPageIndex => console.log("Go to page index", newPageIndex)} />
   ))
 
 

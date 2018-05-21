@@ -29,6 +29,7 @@ export { default as Table } from "./components/table/Table";
 export { default as TableBody } from "./components/table/TableBody";
 export { default as TableCell } from "./components/table/TableCell";
 export { default as TableHead } from "./components/table/TableHead";
+export { default as TablePagination } from "./components/TablePagination";
 export { default as TableRow } from "./components/table/TableRow";
 export { default as Textarea } from "./components/form/Textarea";
 export { default as Topbar } from "./components/Topbar";
