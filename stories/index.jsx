@@ -1,6 +1,7 @@
 import React from "react";
 import { storiesOf } from '@storybook/react';
 import blueprint from "../src/styles/blueprint.css";
+import CssBaseline from "../src/styles/CssBaseline.css";
 
 // Components
 import Avatar from "../src/components/Avatar";
