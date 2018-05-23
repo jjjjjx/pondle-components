@@ -14,31 +14,34 @@ class TablePagination extends Component {
   }
 
   renderPageNumbers() {
-    const { count, onChangePage, page, rowsPerPage } = this.props;
+    const { count, page, onChangePage, rowsPerPage } = this.props;
+
     return (
       <div className={styles.pageNumbers}>
-        { (page - 1) > 0 && <Button minimal onClick={onChangePage.bind(this, page - 2)}>{ page - 1 }</Button> }
-        { page > 0 && <Button minimal onClick={onChangePage.bind(this, page - 1)}>{ page }</Button> }
-        <Button minimal style={{fontWeight: "bold", pointerEvents: "none"}}>{ page + 1}</Button>
-        { (page + 1) * rowsPerPage <= count && <Button minimal onClick={onChangePage.bind(this, page + 1)}>{ page + 2 }</Button> }
-        { (page + 2) * rowsPerPage <= count && <Button minimal onClick={onChangePage.bind(this, page + 2)}>{ page + 3 }</Button> }
+        { (page - 1) > 0 && <Button aria-label={`Page ${page - 1}`} minimal onClick={onChangePage.bind(this, page - 2)} blurOnClick>{ page - 1 }</Button> }
+        { page > 0 && <Button aria-label={`Page ${page}`} minimal onClick={onChangePage.bind(this, page - 1)} blurOnClick>{ page }</Button> }
+        <Button aria-label={`Page ${page + 1}`} minimal style={{fontWeight: "bold", pointerEvents: "none"}}>{ page + 1}</Button>
+        { (page + 1) * rowsPerPage < count && <Button aria-label={`Page ${page + 2}`} minimal onClick={onChangePage.bind(this, page + 1)} blurOnClick>{ page + 2 }</Button> }
+        { (page + 2) * rowsPerPage < count && <Button aria-label={`Page ${page + 3}`} minimal onClick={onChangePage.bind(this, page + 2)} blurOnClick>{ page + 3 }</Button> }
       </div>
     );
   }
 
   render() {
-    const { className, count, onChangePage, page, rowsPerPage, ...otherProps } = this.props;
+    const { className, count, page, onChangePage, rowsPerPage, ...otherProps } = this.props;
 
     return (
       <div className={cx(styles.pagination, "pndl-table-pagination", className)} {...otherProps}>
         <div className={cx(styles.caption, "pndl-table-pagination__caption")}>{this.renderCaption()}</div>
-        <div className={cx(styles.controls, "pndl-table-pagination__controls")}>
-          <Button minimal disabled={page === 0} className={styles.control} onClick={onChangePage.bind(this, 0)}>First</Button>
-          <Button minimal disabled={page === 0} className={styles.control} onClick={onChangePage.bind(this, page - 1)}>Previous</Button>
-          {this.renderPageNumbers()}
-          <Button minimal disabled={(page + 1) * rowsPerPage >= count} className={styles.control} onClick={onChangePage.bind(this, page + 1)}>Next</Button>
-          <Button minimal disabled={(page + 1) * rowsPerPage >= count} className={styles.control} onClick={onChangePage.bind(this, Math.floor(count / rowsPerPage))}>Last</Button>
-        </div>
+        { count > rowsPerPage &&
+          <div className={cx(styles.controls, "pndl-table-pagination__controls")}>
+            <Button aria-label="First page" minimal disabled={page === 0} className={styles.control} onClick={onChangePage.bind(this, 0)}>First</Button>
+            <Button aria-label="Previous page" minimal disabled={page === 0} className={styles.control} onClick={onChangePage.bind(this, page - 1)}>Previous</Button>
+            {this.renderPageNumbers()}
+            <Button aria-label="Next page" minimal disabled={(page + 1) * rowsPerPage >= count} className={styles.control} onClick={onChangePage.bind(this, page + 1)}>Next</Button>
+            <Button aria-label="Last page" minimal disabled={(page + 1) * rowsPerPage >= count} className={styles.control} onClick={onChangePage.bind(this, Math.ceil(count / rowsPerPage) - 1)}>Last</Button>
+          </div>
+        }
       </div>
     );
   }
