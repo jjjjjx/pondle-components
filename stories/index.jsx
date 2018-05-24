@@ -4,41 +4,44 @@ import blueprint from "../src/styles/blueprint.css";
 import CssBaseline from "../src/styles/CssBaseline.css";
 
 // Components
-import Avatar from "../src/components/Avatar";
-import Badge from "../src/components/Badge";
-import Button from "../src/components/Button";
-import DateSelect from "../src/components/form/DateSelect";
-import Dashcard from "../src/components/Dashcard";
-import FieldError from "../src/components/form/FieldError";
-import IconArrowLeft from "../src/components/Icons/IconArrowLeft";
-import IconArrowRight from "../src/components/Icons/IconArrowRight";
-import IconCaretDown from "../src/components/Icons/IconCaretDown";
-import IconDashboard from "../src/components/Icons/IconDashboard";
-import IconGlobe from "../src/components/Icons/IconGlobe";
-import IconLogout from "../src/components/Icons/IconLogout";
-import IconMessages from "../src/components/Icons/IconMessages";
-import IconMore from "../src/components/Icons/IconMore";
-import IconMoreVertical from "../src/components/Icons/IconMoreVertical";
-import IconPeople from "../src/components/Icons/IconPeople";
-import IconProfile from "../src/components/Icons/IconProfile";
-import IconProjects from "../src/components/Icons/IconProjects";
-import IconReports from "../src/components/Icons/IconReports";
-import IconResources from "../src/components/Icons/IconResources";
-import IconSettings from "../src/components/Icons/IconSettings";
-import IconSurveys from "../src/components/Icons/IconSurveys";
-import Input from "../src/components/form/Input";
-import Label from "../src/components/form/Label";
-import Logo from "../src/components/Logo";
-import Select from "../src/components/form/Select";
-import Spinner from "../src/components/Spinner";
-import Table from "../src/components/table/Table";
-import TableBody from "../src/components/table/TableBody";
-import TableCell from "../src/components/table/TableCell";
-import TableHead from "../src/components/table/TableHead";
-import TablePagination from "../src/components/TablePagination";
-import TableRow from "../src/components/table/TableRow";
-import Textarea from "../src/components/form/Textarea";
-import Topbar from "../src/components/Topbar";
+import {
+  Avatar,
+  Badge,
+  Button,
+  DateSelect,
+  Dashcard,
+  DataTable,
+  FieldError,
+  IconArrowLeft,
+  IconArrowRight,
+  IconCaretDown,
+  IconDashboard,
+  IconGlobe,
+  IconLogout,
+  IconMessages,
+  IconMore,
+  IconMoreVertical,
+  IconPeople,
+  IconProfile,
+  IconProjects,
+  IconReports,
+  IconResources,
+  IconSettings,
+  IconSurveys,
+  Input,
+  Label,
+  Logo,
+  Select,
+  Spinner,
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TablePagination,
+  TableRow,
+  Textarea,
+  Topbar
+} from "../src";
 
 // Stories
 storiesOf("Avatar", module)
@@ -78,7 +81,7 @@ storiesOf("Button", module)
     <Button outlineOnLight>Hello Button</Button>
   ))
   .addWithJSX("outline button on dark bg", () => (
-    <div style={{backgroundColor: "#004258", padding: 20}}>
+    <div style={{backgroundColor: "#004258", height: "100vh"}}>
       <Button outlineOnDark>Hello Button</Button>
     </div>
   ), { skip: 1 })
@@ -125,6 +128,28 @@ storiesOf("Dashcard", module)
       <h3>Dashcard with utilities</h3>
       <p>Click the icon in the upper right corner</p>
     </Dashcard>
+  ))
+
+
+
+const dataTableData = [
+  { id: "a", name: "apple", color: "red", price: 2 },
+  { id: "b", name: "banana", color: "yellow", price: 3 },
+  { id: "c", name: "orange", color: "orange", price: 2.5 },
+];
+
+const dataTableColumns = [
+  { label: "Fruit", resolve: item => item.name },
+  { label: "Color", resolve: item => <span style={{color: item.color}}>{item.color}</span> },
+  { label: "Price", resolve: item => `$${item.price}` }
+];
+
+storiesOf("DataTable", module)
+  .addWithJSX("default data table", () => (
+    <DataTable data={dataTableData} columns={dataTableColumns} fieldKey="id" />
+  ))
+  .addWithJSX("striped data table", () => (
+    <DataTable striped data={dataTableData} columns={dataTableColumns} fieldKey="id" />
   ))
 
 
