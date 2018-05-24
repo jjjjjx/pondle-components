@@ -13,6 +13,9 @@
 .dark {
   background-color: #004258;
   border: 0;
+}
+
+.dark * {
   color: white;
 }
 
@@ -29,28 +32,4 @@
   position: absolute;
   top: 0;
   right: 0;
-}
-
-.inner h1, .inner h2, .inner h3, .inner h4, .inner h5, .inner h6 {
-  margin: 0 0 15px;
-  color: inherit;
-  font-weight: normal;
-  line-height: 1;
-}
-
-.inner h1 {
-  font-size: 1.6rem;
-  font-weight: 600;
-}
-
-.inner h2 {
-  font-size: 1.4rem;
-}
-
-.inner h3 {
-  font-size: 1.2rem;
-}
-
-.inner h4, .inner h5, .inner h6 {
-  font-size: 1rem;
 }

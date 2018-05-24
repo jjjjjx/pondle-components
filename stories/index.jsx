@@ -51,13 +51,13 @@ storiesOf("Avatar", module)
 
 
 
-  storiesOf("Badge", module)
-    .addWithJSX("default badge", () => (
-      <Badge>10</Badge>
-    ))
-    .addWithJSX("round badge", () => (
-      <Badge round>10</Badge>
-    ))
+storiesOf("Badge", module)
+  .addWithJSX("default badge", () => (
+    <Badge>10</Badge>
+  ))
+  .addWithJSX("round badge", () => (
+    <Badge round>10</Badge>
+  ))
 
 
 

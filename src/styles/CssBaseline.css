@@ -1,6 +1,7 @@
 body {
   margin: 0;
   font-size: 16px;
+  line-height: 1.5;
   color: #004258;
   font-family: "Roboto", sans-serif;
 }
@@ -8,31 +9,66 @@ body {
 /* Typography
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
+p {
+  font-size: 1rem;
+  margin: 0 0 1.5em;
+}
+
 h1, h2, h3, h4, h5, h6 {
   color: #004258;
-  margin-top: 0;
-  font-weight: 400;
-  line-height: 1.2;
+  font-weight: 700;
 }
 
 h1 {
-  font-size: 40px;
+  font-size: 2.25rem;
+  line-height: 1.3333;
+  margin: 0 0 0.6667em;
 }
 
 h2 {
-  font-size: 30px;
-  font-weight: 300;
+  font-size: 1.5rem;
+  line-height: 1;
+  margin: 0 0 1em;
 }
 
 h3 {
-  font-size: 20px;
+  font-size: 1rem;
+  margin: 0 0 1.5em;
 }
 
 h4 {
-  font-size: 16px;
-  font-weight: 600;
+  font-size: 1rem;
+  margin: 0 0 1.5em;
 }
 
-p {
-  margin-top: 0;
+h5 {
+  font-size: 1rem;
+  margin: 0 0 1.5em;
+}
+
+h6 {
+  font-size: 1rem;
+  margin: 0 0 1.5em;
+  font-style: italic;
+}
+
+@media (min-width: 1170px) {
+
+  h1 {
+    font-size: 3.375rem;
+    line-height: 1.3333;
+    margin-bottom: 0.4444em;
+  }
+
+  h2 {
+    font-size: 2.25rem;
+    line-height: 1.3333;
+    margin-bottom: 0.6667em;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    line-height: 1;
+    margin-bottom: 1em;
+  }
 }
