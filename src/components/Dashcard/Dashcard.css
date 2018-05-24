@@ -28,6 +28,14 @@
   background-size: auto 100%;
 }
 
+.error {
+  border-color: indianred;
+}
+
+.error * {
+  color: indianred;
+}
+
 .utils {
   position: absolute;
   top: 0;

@@ -123,6 +123,12 @@ storiesOf("Dashcard", module)
       <p>This dashcard style is for widgets where no content is available</p>
     </Dashcard>
   ))
+  .addWithJSX("error dashcard", () => (
+    <Dashcard cardStyle="error">
+      <h3>Oh no!</h3>
+      <p>An error has occurred</p>
+    </Dashcard>
+  ))
   .addWithJSX("dashcard with utilities", () => (
     <Dashcard utils={<Utils />}>
       <h3>Dashcard with utilities</h3>

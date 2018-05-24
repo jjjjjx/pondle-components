@@ -16,12 +16,14 @@ const Dashcard = (props) => {
     wrapper: true,
     dark: cardStyle === "dark",
     empty: cardStyle === "empty",
+    error: cardStyle === "error"
   });
 
   const pndlClassNames = cx(
     "pndl-dashcard",
     { "pndl-dashcard--dark": cardStyle === "dark" },
     { "pndl-dashcard--empty": cardStyle === "empty" },
+    { "pndl-dashcard--error": cardStyle === "error" },
   );
 
 
@@ -50,7 +52,7 @@ const Dashcard = (props) => {
 export default Dashcard;
 
 Dashcard.propTypes = {
-  cardStyle: PropTypes.oneOf(["dark", "empty"]), // Optional card types
+  cardStyle: PropTypes.oneOf(["dark", "empty", "error"]), // Optional card types
   style: PropTypes.object, // Custom styles object
   utils: PropTypes.element, // Content to place inside the utilities popover. Use a react component.
 };
