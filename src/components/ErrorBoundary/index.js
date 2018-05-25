@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import styles from "./ErrorBoundary.css";
 
 class ErrorBoundary extends Component {
   constructor(props) {
@@ -24,7 +25,7 @@ class ErrorBoundary extends Component {
 
     if (hasError) {
       return render ? render(error) : (
-        <div>
+        <div className={styles.container}>
           <h2>Something went wrong</h2>
           <p style={{fontStyle: "italic"}}>See browser console for more info.</p>
         </div>
